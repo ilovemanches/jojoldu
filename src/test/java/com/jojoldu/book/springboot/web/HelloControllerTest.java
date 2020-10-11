@@ -1,5 +1,4 @@
-package com.jojoldu.book.springboot;
-
+package com.jojoldu.book.springboot.web;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest
-public class HelloControllerTest{
+
+public class HelloControllerTest {
     @Autowired
     private MockMvc mvc;
 
@@ -41,4 +41,5 @@ public class HelloControllerTest{
                 .andExpect(jsonPath("$.name", is(name)))
                 .andExpect(jsonPath("$.amount", is(amount)));
     }
+
 }
